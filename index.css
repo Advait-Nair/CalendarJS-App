@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+:root {
+    --accept-height: 100vh;
+    --accept-width: 100%;
+    --fs: 1.2rem;
+}
+body {
+    color: #555;
+}
+
+
+.calendar {
+    user-select: none;
+    width: 100%;
+    font-size: var(--fs);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.fc-header-toolbar {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+
+.fc-toolbar {
+    margin: 1rem;
+}
+
+.overlay {
+    transform: scaleY(0);
+    transition: ease-in-out all 150ms;
+    background: #fff;
+    position: absolute;
+    z-index: 10;
+    bottom: 1rem;
+    left: 1rem;
+    box-shadow: 0 0 6px 1px #555;
+    transform-origin: bottom;
+    width: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    border: 1.5px solid #eee;
+}
+.overlay h2 {
+    text-align: center;
+}
+.overlay h2::after {
+    display: block;
+    padding: 0.1rem 1rem;
+    color: #666;
+    font-size: 1rem;
+    content: "Stop hovering on event to close. Disappears after 5 seconds."
+}
+.overlay .info {
+    font-size: 1.5rem;
+}
+
+.a {background: #21a9ff; color: #eee !important; transition: all 100ms ease-in-out;cursor: pointer; text-overflow: ellipsis !important;}
+.b {background: #ff5e00; color: #eee !important; transition: all 100ms ease-in-out;cursor: pointer; text-overflow: ellipsis !important;}
+.c {background: #4400ff; color: #eee !important; transition: all 100ms ease-in-out;cursor: pointer; text-overflow: ellipsis !important;}
+.d {background: #ff00aa; color: #eee !important; transition: all 100ms ease-in-out;cursor: pointer; text-overflow: ellipsis !important;}
+.e {background: #d80000; color: #eee !important; transition: all 100ms ease-in-out;cursor: pointer; text-overflow: ellipsis !important;}
+.f {background: #8cd800; color: #eee !important; transition: all 100ms ease-in-out;cursor: pointer; text-overflow: ellipsis !important;}
+
+
+.a:hover {background: #1d94df !important; color: #eee !important;}
+.b:hover {background: #da5000 !important; color: #eee !important;}
+.c:hover {background: #3900d6 !important; color: #eee !important;}
+.d:hover {background: #cc0088 !important; color: #eee !important;}
+.e:hover {background: #af0000 !important; color: #eee !important;}
+.f:hover {background: #6faa00 !important; color: #eee !important;}
